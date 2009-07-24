@@ -16,7 +16,7 @@ def write_file(file_path, data):
     out.close()
 
 for line in shaney.generate(data.read(), count):
-    write_file(os.path.join('data',str(lineno % 1000), str(lineno))
+    write_file(os.path.join('data',str(lineno % 1000), str(lineno)), line)
     if lineno % 100 == 0: 
         print lineno, 'Done'
     lineno += 1
