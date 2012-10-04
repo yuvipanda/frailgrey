@@ -6,6 +6,7 @@
         $.get( url ).done( function( data ) {
             $( '#quote' ).text( data );
             setHash( id );
+            setTweetLink( data );
         } );
     }
 
@@ -23,6 +24,13 @@
         return window.location.hash.substring( 1 );
     }
 
+    function setTweetLink( text ) {
+        var $twitter = $( '#share-twitter' );
+        var tweetText = '"' + text.substr( 0, 120 ) + '" ' + window.location.href; 
+        var url = "https://twitter.com/share?text=" + encodeURIComponent( tweetText );
+        $twitter.attr( 'href', url );
+    }
+
     $( function() {
         if( getHash() != "" ) {
             showQuote( getHash() );
@@ -30,10 +38,13 @@
             showRandomQuote();
         }
         $( '#random' ).click( showRandomQuote );
-        $( document ).keypress( function() {
-            if( event.which === 114 || event.which === 82 ) {
+        $( document ).keydown( function() {
+            if( event.which === 82 ) {
                 // r or R
                 showRandomQuote();
+            } else if( event.which === 84 ) {
+                // t
+                window.open( $( '#share-twitter' ).attr( 'href' ) );
             }
         } );
     } );

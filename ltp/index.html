@@ -90,6 +90,12 @@
                 text-decoration: none;
                 font-weight: normal;
             }
+            #shortcuts-help {
+                font-size: 10px;
+                color: #aaa;
+                font-family: "Maven Pro", serif;
+                margin-top: 16px;
+            }
             #footer {
                 margin-top: 64px;
                 border-top: 1px dotted #ccc;
@@ -113,9 +119,13 @@
             <div>
                 <div id="links">
                     <a href="#" id="permalink">Permalink</a> |
-                    <a href="#" id="random">Random Quote</a>
+                    <a href="#" id="random">Random Quote</a> |
+                    <a href="https://twitter.com/share" id="share-twitter" target="_blank">Tweet</a>
                 </div>
                 <div id="quote">
+                </div>
+                <div id="shortcuts-help">
+                    Keyboard Shortcuts: <code>r</code> for random quote, <code>t</code> for tweet
                 </div>
                 <div id="footer">
                     <a href="http://github.com/yuvipanda/frailgrey">Code</a> by <a href="http://yuvi.in">@yuvipanda</a>. Originally written for @freya, <a href="http://krishashok.wordpress.com/">@krishashok</a> and <a href="http://blog.louisgray.com">@louisgray</a>
@@ -132,7 +142,6 @@
              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
              })();
-
          </script>
     </body>
 </html>
