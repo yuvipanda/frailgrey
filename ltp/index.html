@@ -1,0 +1,124 @@
+<!doctype html5>
+<html>
+    <head>
+        <title> </title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Maven+Pro' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                background: url('grey.png');
+                font-family: "Maven Pro", serif;
+            }
+            a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 4px;
+                outline: 0;
+                color: #3a599d;
+                -webkit-transition-duration: 0.25s;
+                -moz-transition-duration: 0.25s;
+                -o-transition-duration: 0.25s;
+                transition-duration: 0.25s;
+                -webkit-transition-property: -webkit-transform;
+                -moz-transition-property: -moz-transform;
+                -o-transition-property: -o-transform;
+                transition-property: transform;
+                -webkit-transform: scale(1) rotate(0);
+                -moz-transform: scale(1) rotate(0);
+                -o-transform: scale(1) rotate(0);
+                transform: scale(1) rotate(0);
+            }
+            a:hover {
+                background: url('use_your_illusion.png');
+                text-decoration: none;
+                color: #fff;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -o-border-radius: 4px;
+                border-radius: 4px;
+                -webkit-transform: scale(1.05) rotate(-1deg);
+                -moz-transform: scale(1.05) rotate(-1deg);
+                -o-transform: scale(1.05) rotate(-1deg);
+                transform: scale(1.05) rotate(-1deg);
+            }
+
+            a:nth-child(2n):hover {
+                -webkit-transform: scale(1.05) rotate(1deg);
+                -moz-transform: scale(1.05) rotate(1deg);
+                -o-transform: scale(1.05) rotate(1deg);
+                transform: scale(1.05) rotate(1deg);
+            }
+
+            #container {
+                margin: 0px auto;
+                width: 960px;
+                text-align: center;
+            }
+            #header {
+                font-size: 42px;
+                font-family: "Sorts Mill Goudy", Serif;
+                padding-bottom: 16px;
+            }
+            #header small {
+                display: block;
+                font-size: 16px;
+            }
+            #quote {
+                font-size: 26px;
+                color: #fff;
+                margin-top: 12px;
+                padding: 24px 12px;
+                background: url('use_your_illusion.png');
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 0px 0px 10px 1px rgba(7, 7, 7, 0.5);
+                box-shadow: 0px 0px 10px 1px rgba(7, 7, 7, 0.5);
+                text-shadow: 0px 0px 1px #000;
+                filter: dropshadow(color=#000, offx=0, offy=0);
+            }
+            #logo {
+                opacity: 0.7;
+            }
+            #links {
+                margin-top: 16px;
+                text-align: center;
+                font-family: "Sorts Mill Goudy", Serif;
+                font-size: 16px;
+            }
+            #links a {
+                text-decoration: none;
+                font-weight: normal;
+            }
+            #footer {
+                margin-top: 64px;
+                border-top: 1px dotted #ccc;
+                padding-top: 8px;
+                font-size: 12px;
+                opacity: 0.5;
+            }
+        </style>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="gray.js"> </script>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="header">
+                Local Tea Party Quote Generator <br />
+                <img src="pen.png" id="logo" />
+                <small>Generates random quotes based on the writings of <a href="http://thelocalteaparty.com">Local Tea Party</a></small>
+            </div>
+            <div>
+                <div id="links">
+                    <a href="#" id="permalink">Permalink</a> |
+                    <a href="#" id="random">Random Quote</a>
+                </div>
+                <div id="quote">
+                </div>
+                <div id="footer">
+                    <a href="http://github.com/yuvipanda/frailgrey">Code</a> by <a href="http://yuvi.in">@yuvipanda</a>. Originally written for @freya, <a href="http://krishashok.wordpress.com/">@krishashok</a> and <a href="http://blog.louisgray.com">@louisgray</a>
+            </div>
+        </div>
+    </body>
+</html>
