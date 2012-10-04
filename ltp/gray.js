@@ -30,5 +30,11 @@
             showRandomQuote();
         }
         $( '#random' ).click( showRandomQuote );
+        $( document ).keypress( function() {
+            if( event.which === 114 || event.which === 82 ) {
+                // r or R
+                showRandomQuote();
+            }
+        } );
     } );
 } )();
