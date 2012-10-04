@@ -26,7 +26,7 @@
 
     function setTweetLink( text ) {
         var $twitter = $( '#share-twitter' );
-        var tweetText = '"' + text + '"; 
+        var tweetText = '"' + text + '"';
         var url = "https://twitter.com/share?text=" + encodeURIComponent( tweetText ) + "&url=" + encodeURIComponent( window.location.href );
         $twitter.attr( 'href', url );
     }
